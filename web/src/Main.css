@@ -1,0 +1,16 @@
+main {
+    flex: 1; /*vai ocupar todo o espço disponível pra ele por causa do flex direction: row*/
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*o mesmo q 1fr 1fr*/
+    gap: 20px;
+    list-style: none;
+}
+/*responsivo pra celular - ver p app.css @media*/
+@media (max-width: 650px) {
+    main ul {
+        grid-template-columns: 1fr;
+    }
+}

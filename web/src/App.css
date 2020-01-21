@@ -1,0 +1,31 @@
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px, 30px;
+
+    display: flex;
+    flex-direction: row; /* alinhados como tabela */
+    align-items: flex-start; /* main e aside sempre alinhados ao topo*/   
+}
+
+#app main {
+    margin-left: 30px;
+}
+
+/*na tela com o direito, inspecionar elemento*/
+/*ele tem q estar em baixo, aí vai diminuindo a tela e no canto direito aparece os px*/
+/*quando chegar nos 1000px vai jogar as coisas pra baixo*/
+@media (max-width: 1000px) {
+    #app {
+        flex-direction: column;
+    }
+
+    #app main {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    #app aside {
+        width: 100%;
+    }
+} 
